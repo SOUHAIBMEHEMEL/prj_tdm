@@ -31,5 +31,9 @@ object DataProvider {
         )
 
     private val descriptions: Array<String>
-        get() =arrayOf("a", "b", "c")
+        get() =arrayOf(
+            "a ssssssssssssss sssssss sssssssssss ssssssssssssssssss sssssssssssss sssssss ssssssssssss sssssssss sssss",
+            "b assssssssssssss sssssss sssssssssss ssssssssssssssssss sssssssssssss sssssss ssssssssssss sssssssss sssss",
+            "c assssssssssssss sssssss sssssssssss ssssssssssssssssss sssssssssssss sssssss ssssssssssss sssssssss sssss"
+        )
 }

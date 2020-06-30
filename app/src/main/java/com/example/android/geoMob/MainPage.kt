@@ -35,6 +35,7 @@ class MainPage : AppCompatActivity(), MyCommunicator {
             //fragmentB?.displayDetails(title, description)
             txvTitle.text = title
             txvDescription.text = description
+            image1.setImageResource(R.drawable.bresil)
         } else { // When we are in Smart phone
             val intent = Intent(this, DetailActivity::class.java)
             intent.putExtra("title", title)
