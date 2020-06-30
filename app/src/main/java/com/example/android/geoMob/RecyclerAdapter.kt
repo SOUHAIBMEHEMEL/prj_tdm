@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.android.exo1.R
 import kotlinx.android.synthetic.main.list_item.view.*
 
-class RecyclerAdapter(private val context: Context?, private var list: List<Destination>) :
+class RecyclerAdapter(private val context: Context?, private var list: MutableList<Pays>) :
     RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
@@ -31,15 +31,13 @@ class RecyclerAdapter(private val context: Context?, private var list: List<Dest
     inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
         private var pos: Int = 0
-        lateinit var current: Destination
+        lateinit var current: Pays
 
-        fun setData(current: Destination, position: Int) {
+        fun setData(current: Pays, position: Int) {
             itemView.tvTitle.text = current.title
             itemView.img_row.setImageResource(current.image)
             this.pos = position
             this.current = current
-
-            Toast.makeText(context,"données: "+current.title, Toast.LENGTH_SHORT).show()
 
         }
 
@@ -48,7 +46,7 @@ class RecyclerAdapter(private val context: Context?, private var list: List<Dest
             itemView.setOnClickListener {
                 val myCommunicator = context as MyCommunicator
                 myCommunicator.displayDetails(current.title, current.description )
-                Toast.makeText(context,"données : "+current.title, Toast.LENGTH_SHORT).show()
+                Toast.makeText(context,""+current.title, Toast.LENGTH_SHORT).show()
             }
         }
     }

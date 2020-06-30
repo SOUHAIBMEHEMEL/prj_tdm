@@ -26,15 +26,15 @@ class InterventionListAdapter(private val _ctx: Context, rId: Int, private val p
         var btnRemove = rowView.findViewById<TextView>(supprimerBtn2)
 
         val p = produits[position]
-        numero.text= p.numero.toString()
-        date.text = p.date
-        nomPlombier.text = p.nom_plombier
-        typeInt.text= p.type
+        numero.text= p.image.toString()
+        date.text = p.title
+        nomPlombier.text = p.description
+
 
         btnEdit.setOnClickListener({
             val intent = Intent(_ctx, EditIntervention::class.java)
             intent.putExtra("mode", "modif")
-            intent.putExtra("numero", p.numero)
+            intent.putExtra("numero", p.image)
             _ctx.startActivity(intent)
         })
 

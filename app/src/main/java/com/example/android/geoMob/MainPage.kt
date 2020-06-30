@@ -1,11 +1,17 @@
 package com.example.android.geoMob
 
 import android.content.Intent
+import android.os.AsyncTask
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.android.exo1.R
+import com.example.android.exo1.R.id.container
 import kotlinx.android.synthetic.main.activity_detail.*
+import kotlinx.android.synthetic.main.content_database.*
 import kotlinx.android.synthetic.main.fragment_b.*
 
 class MainPage : AppCompatActivity(), MyCommunicator {
@@ -36,4 +42,6 @@ class MainPage : AppCompatActivity(), MyCommunicator {
             startActivity(intent)
         }
     }
+
+
 }

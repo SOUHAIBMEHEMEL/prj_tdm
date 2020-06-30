@@ -44,7 +44,7 @@ class EditIntervention : AppCompatActivity() {
             override fun doInBackground(vararg voids: Void): Void? {
                 val db = PaysDB.getInstance(act)
                 val dao = db?.PaysDAO()
-                val produit = Pays(numero,date,nom,type)
+                val produit = Pays(numero,date,nom)
                 if(mode == "modif")
                     dao?.modifier(produit)
                 else

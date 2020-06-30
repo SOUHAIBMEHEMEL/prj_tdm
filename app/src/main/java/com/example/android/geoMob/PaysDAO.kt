@@ -9,8 +9,8 @@ interface PaysDAO {
     @Query("SELECT * FROM Pays")
     fun getProduits(): MutableList<Pays>
 
-    @Query("SELECT * FROM Pays WHERE numero = :num")
-    fun getProduit(num: Int): List<Pays>
+    @Query("SELECT * FROM Pays WHERE image = :img")
+    fun getProduit(img: Int): List<Pays>
 
     @Insert
     fun ajouter(intervention : Pays)
