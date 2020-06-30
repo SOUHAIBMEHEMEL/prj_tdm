@@ -8,12 +8,15 @@
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Default Color"
+            android:text="Default"
+            android:layout_margin="20dp"
+            android:background="@color/colorPrimaryDark"
             android:id="@+id/defaultBtn"/>
 
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:background="#129fff"
             android:text="Blue"
             android:id="@+id/blueBtn"/>
@@ -21,8 +24,9 @@
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:background="#FF1800"
-            android:text="Blue"
+            android:text="Red"
             android:id="@+id/redBtn"/>
 
 </LinearLayout>

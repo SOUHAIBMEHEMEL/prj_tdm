@@ -1,18 +1,13 @@
-package com.example.android.exo1
+package com.example.android.geoMob
 
 import android.content.Intent
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.android.exo1.R
 import kotlinx.android.synthetic.main.activity_main.*
-import com.example.android.exo1.Activity2
-import com.example.android.exo2.Intervention
-import com.example.android.exo2.exo2
-import com.example.android.exo2.listAdapter
-import com.example.android.exo3.exo3
-import java.util.ArrayList
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,8 +20,7 @@ class MainActivity : AppCompatActivity() {
         else { setTheme(app_color)}
         setContentView(R.layout.activity_main)
 
-        setEvent(btn2, Activity2::class.java)
-        setEvent(btn3, exo2::class.java)
+        setEvent(btn3, MainPage::class.java)
         setEvent(btn4, exo3::class.java)
 
     }

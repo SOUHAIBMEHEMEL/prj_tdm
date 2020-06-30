@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
           package="com.example.android.exo1">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -11,18 +11,17 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.android.geoMob.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".Activity2"></activity>
-        <activity android:name="com.example.android.exo2.exo2"></activity>
-        <activity android:name="com.example.android.exo2.AjouterIntervention"></activity>
-        <activity android:name="com.example.android.exo3.exo3"></activity>
-        <activity android:name="com.example.android.exo3.EditIntervention"></activity>
+        <activity android:name="com.example.android.geoMob.exo3"></activity>
+        <activity android:name="com.example.android.geoMob.EditIntervention"></activity>
+        <activity android:name="com.example.android.geoMob.MainPage"></activity>
+        <activity android:name="com.example.android.geoMob.DetailActivity"></activity>
     </application>
 
 </manifest>

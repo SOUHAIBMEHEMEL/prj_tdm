@@ -1,4 +1,4 @@
-package com.example.android.exo3
+package com.example.android.geoMob
 
 import android.content.Context
 import android.content.Intent
@@ -12,7 +12,7 @@ import android.widget.Toast
 import com.example.android.exo1.R
 import com.example.android.exo1.R.id.*
 
-class InterventionListAdapter(private val _ctx: Context, rId: Int, private val produits: MutableList<InterventionExo3>) : ArrayAdapter<InterventionExo3>(_ctx, rId, produits) {
+class InterventionListAdapter(private val _ctx: Context, rId: Int, private val produits: MutableList<Pays>) : ArrayAdapter<Pays>(_ctx, rId, produits) {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         val inflater = _ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -28,7 +28,7 @@ class InterventionListAdapter(private val _ctx: Context, rId: Int, private val p
         val p = produits[position]
         numero.text= p.numero.toString()
         date.text = p.date
-        nomPlombier.text = p.npm_plombier
+        nomPlombier.text = p.nom_plombier
         typeInt.text= p.type
 
         btnEdit.setOnClickListener({
@@ -37,6 +37,7 @@ class InterventionListAdapter(private val _ctx: Context, rId: Int, private val p
             intent.putExtra("numero", p.numero)
             _ctx.startActivity(intent)
         })
+
         btnRemove.setOnClickListener({
             supprimerIntervention(_ctx, p)
         })
@@ -45,12 +46,12 @@ class InterventionListAdapter(private val _ctx: Context, rId: Int, private val p
         return rowView
     }
 
-    fun supprimerIntervention(ctx: Context, p: InterventionExo3) {
+    fun supprimerIntervention(ctx: Context, p: Pays) {
         var adapter = this
         object : AsyncTask<Void, Void, Void>() {
             override fun doInBackground(vararg voids: Void): Void? {
-                val db = InterventionDB.getInstance(ctx)
-                val dao = db?.InterventionDAO()
+                val db = PaysDB.getInstance(ctx)
+                val dao = db?.PaysDAO()
                 dao?.supprimer(p)
                 return null
             }
