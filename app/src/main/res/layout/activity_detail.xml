@@ -64,8 +64,8 @@
                     android:layout_marginTop="8dp" />
                 <ImageView
                     android:id="@+id/drapeau"
-                    android:layout_width="40dp"
-                    android:layout_height="25dp"
+                    android:layout_width="100dp"
+                    android:layout_height="65dp"
                     android:layout_weight="1"
                     android:src="@drawable/algerie"/>
             </LinearLayout>
@@ -111,7 +111,6 @@
                     android:layout_margin="10dp"
                     android:text="surface"
                     android:textSize="20sp"
-                    android:textStyle="bold"
                     android:layout_weight="3"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
@@ -136,7 +135,6 @@
                     android:id="@+id/population"
                     android:text="population"
                     android:textSize="20sp"
-                    android:textStyle="bold"
                     android:layout_weight="3"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
@@ -163,28 +161,28 @@
                     <ImageView
                         android:id="@+id/image1"
                         android:layout_width="200dp"
-                        android:layout_height="200dp"
+                        android:layout_height="130dp"
                         android:layout_marginRight="20dp"
                         android:src="@drawable/algerie"/>
 
                     <ImageView
                         android:id="@+id/image2"
                         android:layout_width="200dp"
-                        android:layout_height="200dp"
+                        android:layout_height="130dp"
                         android:layout_marginRight="20dp"
                         android:src="@drawable/algerie"/>
 
                     <ImageView
                         android:id="@+id/image3"
                         android:layout_width="200dp"
-                        android:layout_height="200dp"
+                        android:layout_height="130dp"
                         android:layout_marginRight="20dp"
                         android:src="@drawable/algerie"/>
 
                     <ImageView
                         android:id="@+id/image4"
                         android:layout_width="200dp"
-                        android:layout_height="200dp"
+                        android:layout_height="130dp"
                         android:layout_marginRight="20dp"
                         android:src="@drawable/algerie"/>
                 </LinearLayout>
@@ -218,7 +216,6 @@
                     android:layout_margin="10dp"
                     android:text="population"
                     android:textSize="20sp"
-                    android:textStyle="bold"
                     android:layout_weight="3"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
@@ -242,10 +239,58 @@
                     android:layout_margin="10dp"
                     android:text="description"
                     android:textSize="20sp"
-                    android:textStyle="bold"
                     android:layout_weight="3"
                     android:layout_marginTop="8dp" />
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Images du pays:"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+            <HorizontalScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <VideoView
+                        android:id="@+id/Video1"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginRight="20dp"
+                        />
+
+                    <VideoView
+                        android:id="@+id/Video2"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginRight="20dp"
+                        />
+
+                    <VideoView
+                        android:id="@+id/Video3"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginRight="20dp"
+                        />
+
+                    <VideoView
+                        android:id="@+id/Video4"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginRight="20dp"
+                        />
+                </LinearLayout>
+            </HorizontalScrollView>
 
         </LinearLayout>
 

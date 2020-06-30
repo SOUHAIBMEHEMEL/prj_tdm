@@ -19,7 +19,7 @@ class DetailActivity: AppCompatActivity() {
         // Pass the data to FragmentB to display it
         val fragmentB = supportFragmentManager.findFragmentById(R.id.fragmentB) as FragmentB?
         //fragmentB?.displayDetails(title, "des")
-        txvTitle.text = title
+        txvTitle.text = "Sohaib"
         txvDescription.text = description
     }
 }
