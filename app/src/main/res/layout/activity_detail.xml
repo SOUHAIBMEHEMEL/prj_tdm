@@ -107,7 +107,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/surface"
+                    android:id="@+id/txtsurface"
                     android:layout_margin="10dp"
                     android:text="surface"
                     android:textSize="20sp"
@@ -132,7 +132,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:id="@+id/population"
+                    android:id="@+id/txtpopulation"
                     android:text="population"
                     android:textSize="20sp"
                     android:layout_weight="3"

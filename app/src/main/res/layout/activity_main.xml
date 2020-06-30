@@ -6,27 +6,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context="com.example.android.geoMob.MainActivity">
 
 
     <Button
-            android:id="@+id/btn2"
+            android:id="@+id/StartBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="EXO 1"/>
-
-    <Button
-            android:id="@+id/btn3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="EXO 2"/>
-    <Button
-            android:id="@+id/btn4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:text="EXO 3"/>
+            android:text="Start"/>
 
 </LinearLayout>

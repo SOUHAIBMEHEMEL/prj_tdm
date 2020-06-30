@@ -17,7 +17,7 @@ abstract class PaysDB (): RoomDatabase(){
 
         fun getInstance(context: Context): PaysDB? {
             if (instance == null) {
-                instance = Room.databaseBuilder(context.applicationContext, PaysDB::class.java, "paysDB1.db").build()
+                instance = Room.databaseBuilder(context.applicationContext, PaysDB::class.java, "GeoMobDb.db").build()
             }
             return instance
         }

@@ -45,7 +45,7 @@ class RecyclerAdapter(private val context: Context?, private var list: MutableLi
 
             itemView.setOnClickListener {
                 val myCommunicator = context as MyCommunicator
-                myCommunicator.displayDetails(current.title, current.description )
+                myCommunicator.displayDetails(current.title, current.description, current.hymne,current.surface,current.population )
                 Toast.makeText(context,""+current.title, Toast.LENGTH_SHORT).show()
             }
         }

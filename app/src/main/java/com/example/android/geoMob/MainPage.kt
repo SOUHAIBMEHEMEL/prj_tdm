@@ -1,6 +1,7 @@
 package com.example.android.geoMob
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.AsyncTask
 import android.os.Bundle
 import android.view.View
@@ -20,6 +21,7 @@ class MainPage : AppCompatActivity(), MyCommunicator {
     private var db: PaysDB? = null
     private var dao: PaysDAO? = null
     private var list_pays: MutableList<Pays>? = null
+    private var mp: MediaPlayer? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,12 +34,14 @@ class MainPage : AppCompatActivity(), MyCommunicator {
         mIsDualPane = fragmentBView?.visibility == View.VISIBLE
     }
 
-    override fun displayDetails(title: String, description: String) {
+    override fun displayDetails(title: String, description: String, hymne:Int, surface:String, population:String) {
 
         if (mIsDualPane) { // If we are in Landscape mode
             val fragmentB = supportFragmentManager.findFragmentById(R.id.fragmentB) as FragmentB?
             txvTitle.text = title
             txvDescription.text = description
+            txtsurface.text=surface
+            txtpopulation.text=population
             image1.setImageResource(R.drawable.bresil)
         } else { // When we are in Portrait Mode
             val intent = Intent(this, DetailActivity::class.java)
@@ -45,6 +49,29 @@ class MainPage : AppCompatActivity(), MyCommunicator {
             intent.putExtra("description", description)
             startActivity(intent)
         }
+        btnHymne.setOnClickListener(){
+            lireAudio(hymne)
+        }
+    }
+
+    fun lireAudio(resId: Int) {
+        mp=null
+
+        if (mp == null) {        //set up MediaPlayer
+            mp = MediaPlayer.create(this, resId)
+
+            try {
+                mp!!.prepare()
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+
+        }
+        if (!mp!!.isPlaying())
+            mp!!.start()
+        else
+            mp!!.pause()
     }
 
 
@@ -59,11 +86,10 @@ class MainPage : AppCompatActivity(), MyCommunicator {
                 act.dao = db?.PaysDAO()
                 list_pays = act.dao?.getProduits()
                 if (list_pays!!.size == 0){
-                    act.dao?.ajouter(Pays(R.drawable.algerie,"Algerie","Description algerie"))
-                    act.dao?.ajouter(Pays(R.drawable.maroc,"Maroc","Description maroc"))
-                    act.dao?.ajouter(Pays(R.drawable.egypte,"Egypte","Description Egypte"))
+                    act.dao?.ajouter(Pays(R.drawable.algerie,"Algerie","Description algerie",R.raw.number1,"2M km2","45 milion"))
+                    act.dao?.ajouter(Pays(R.drawable.maroc,"Maroc","Description maroc",R.raw.number1,"200.000 km2","15 milion"))
+                    act.dao?.ajouter(Pays(R.drawable.egypte,"Egypte","Description Egypte",R.raw.number1,"4M km2","85 milion"))
                 }
-
 
                 return null
             }

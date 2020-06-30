@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         else { setTheme(app_color)}
         setContentView(R.layout.activity_main)
 
-        setEvent(btn3, MainPage::class.java)
-        setEvent(btn4, exo3::class.java)
+        setEvent(StartBtn, MainPage::class.java)
+
 
     }
 

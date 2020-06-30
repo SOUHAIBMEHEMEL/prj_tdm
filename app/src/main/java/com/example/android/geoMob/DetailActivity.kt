@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.android.exo1.R
 import kotlinx.android.synthetic.main.activity_detail.*
-import kotlinx.android.synthetic.main.fragment_b.*
 
 class DetailActivity: AppCompatActivity() {
 
@@ -19,7 +18,7 @@ class DetailActivity: AppCompatActivity() {
         // Pass the data to FragmentB to display it
         val fragmentB = supportFragmentManager.findFragmentById(R.id.fragmentB) as FragmentB?
         //fragmentB?.displayDetails(title, "des")
-        txvTitle.text = "Sohaib"
+        txvTitle.text = title
         txvDescription.text = description
     }
 }
