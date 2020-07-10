@@ -25,6 +25,7 @@ class DetailActivity: AppCompatActivity() {
         val population= intent.getStringExtra("population")
         val historique=intent.getStringExtra("historique")
         val hymne= intent.getIntExtra("hymne",R.raw.hymne_algerie)
+        val drap= intent.getIntExtra("drapeau",R.drawable.algerie)
         val video = intent.getStringExtra("video")
         val images = intent.getStringExtra("images")
         val personnalite = intent.getStringExtra("personnalite")
@@ -36,6 +37,7 @@ class DetailActivity: AppCompatActivity() {
         txtpopulation.text=population
         historiqueDate.text= historique
         historiqueDescription.text= historique
+        drapeau.setImageResource(drap)
 
         // lire Hymne
         btnHymne.setOnClickListener(){
@@ -61,14 +63,16 @@ class DetailActivity: AppCompatActivity() {
         // set images
         val list_images: List<String> = images.split("_")
         image1.setImageResource(list_images[0].toInt())
-        image1.setImageResource(list_images[1].toInt())
-        image1.setImageResource(list_images[2].toInt())
-        image1.setImageResource(list_images[3].toInt())
+        image2.setImageResource(list_images[1].toInt())
+        image3.setImageResource(list_images[2].toInt())
+        image4.setImageResource(list_images[3].toInt())
 
         //set personalite
         val personalite: List<String> = personnalite.split("_")
         personaliteImage.setImageResource(personalite[0].toInt())
         personaliteDescription.text=personnalite[1].toString()
+
+
 
     }
 

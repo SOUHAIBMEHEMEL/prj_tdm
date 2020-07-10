@@ -38,12 +38,13 @@ class MainPage : AppCompatActivity(), MyCommunicator {
         mIsDualPane = fragmentBView?.visibility == View.VISIBLE
     }
 
-    override fun displayDetails(title: String, description: String, hymne:Int, surface:String, population:String, historique: String, ressource: String, personnalite: String, video:String, images:String) {
+    override fun displayDetails(title: String, description: String, hymne:Int, image:Int, surface:String, population:String, historique: String, ressource: String, personnalite: String, video:String, images:String) {
 
         if (mIsDualPane) { // If we are in Landscape mode
             txvTitle.text = title
             txvDescription.text = description
             txtsurface.text=surface
+            drapeau.setImageResource(image)
             txtpopulation.text=population
             historiqueDate.text= historique
             historiqueDescription.text= historique
@@ -90,6 +91,7 @@ class MainPage : AppCompatActivity(), MyCommunicator {
             intent.putExtra("population", population)
             intent.putExtra("historique", historique)
             intent.putExtra("hymne", hymne)
+            intent.putExtra("drapeau", image)
             intent.putExtra("video", video)
             intent.putExtra("images", images)
             intent.putExtra("personnalite", personnalite)
@@ -161,11 +163,25 @@ class MainPage : AppCompatActivity(), MyCommunicator {
                         "45 milion",
                         "1954 Revolution",
                         "Petrol ressource naturelle",
-                        ""+R.drawable.ibn_badis+"_Ibn Badis Abdelhamid (1889 - 1940): Une figure emblématique du mouvement réformiste musulman en Algérie",
+                        ""+R.drawable.ibn_badis+"_"+"Ibn Badis Abdelhamid (1889 - 1940): Une figure emblématique du mouvement réformiste musulman en Algérie",
                         ""+R.raw.video_algerie1+"_"+R.raw.video_algerie2+"_"+R.raw.video_algerie3+"_"+R.raw.video_algerie1,
                         ""+R.drawable.algerie_img1+"_"+R.drawable.algerie_img2+"_"+R.drawable.algerie_img3+"_"+R.drawable.algerie_img4
 
                         ))
+
+                    act.dao?.ajouter(Pays(
+                        R.drawable.maroc,"Maroc",
+                        "Description Maroc",
+                        R.raw.hymne_maroc,
+                        "200.000 km2",
+                        "14 milion",
+                        "1930 Revolution",
+                        "Zink ressource naturelle",
+                        ""+R.drawable.mohammed5+"_"+"Mohamed5 (1889 - 1940): Une figure emblématique du mouvement réformiste musulman en Algérie",
+                        ""+R.raw.video_maroc1+"_"+R.raw.video_maroc2+"_"+R.raw.video_maroc3+"_"+R.raw.video_maroc4,
+                        ""+R.drawable.maroc_img1+"_"+R.drawable.maroc_img2+"_"+R.drawable.maroc_img3+"_"+R.drawable.maroc_img4
+
+                    ))
                 }
 
                 return null

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
     <TextView
@@ -153,36 +153,45 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:layout_marginTop="20dp"
-                    android:orientation="horizontal">
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
 
                     <ImageView
                         android:id="@+id/image1"
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
+                        android:layout_width="420dp"
+                        android:layout_height="240dp"
+                        android:background="@drawable/card"
+                        android:elevation="15dp"
                         android:layout_marginRight="20dp"
+                        android:layout_marginLeft="10dp"
                         android:src="@drawable/algerie"/>
 
                     <ImageView
                         android:id="@+id/image2"
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
+                        android:layout_width="420dp"
+                        android:layout_height="240dp"
                         android:layout_marginRight="20dp"
+                        android:background="@drawable/card"
+                        android:elevation="15dp"
                         android:src="@drawable/algerie"/>
 
                     <ImageView
                         android:id="@+id/image3"
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
+                        android:layout_width="420dp"
+                        android:layout_height="240dp"
+                        android:background="@drawable/card"
+                        android:elevation="15dp"
                         android:layout_marginRight="20dp"
                         android:src="@drawable/algerie"/>
 
                     <ImageView
                         android:id="@+id/image4"
-                        android:layout_width="200dp"
-                        android:layout_height="130dp"
+                        android:layout_width="420dp"
+                        android:layout_height="240dp"
+                        android:background="@drawable/card"
+                        android:elevation="15dp"
                         android:layout_marginRight="20dp"
                         android:src="@drawable/algerie"/>
                 </LinearLayout>
@@ -247,7 +256,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Images du pays:"
+                android:text="Videos du pays:"
                 android:textSize="25sp"
                 android:textStyle="bold"
                 android:layout_marginTop="8dp" />
@@ -259,7 +268,6 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
                     android:orientation="horizontal">
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -269,13 +277,14 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Lire video"
+                            android:layout_marginLeft="10dp"
                             android:id="@+id/videoBtn1"/>
                         <VideoView
                             android:id="@+id/Video1"
-                            android:layout_width="320dp"
-                            android:layout_height="180dp"
+                            android:layout_width="420dp"
+                            android:layout_height="220dp"
                             android:layout_marginRight="20dp"
-                            />
+                            android:layout_marginLeft="10dp"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -288,8 +297,8 @@
                             android:id="@+id/videoBtn2"/>
                         <VideoView
                             android:id="@+id/Video2"
-                            android:layout_width="320dp"
-                            android:layout_height="180dp"
+                            android:layout_width="420dp"
+                            android:layout_height="220dp"
                             android:layout_marginRight="20dp"
                             />
                     </LinearLayout>
@@ -304,8 +313,8 @@
                             android:id="@+id/videoBtn3"/>
                         <VideoView
                             android:id="@+id/Video3"
-                            android:layout_width="320dp"
-                            android:layout_height="180dp"
+                            android:layout_width="420dp"
+                            android:layout_height="220dp"
                             android:layout_marginRight="20dp"
                             />
                     </LinearLayout>
@@ -320,8 +329,8 @@
                             android:id="@+id/videoBtn4"/>
                         <VideoView
                             android:id="@+id/Video4"
-                            android:layout_width="320dp"
-                            android:layout_height="180dp"
+                            android:layout_width="420dp"
+                            android:layout_height="220dp"
                             android:layout_marginRight="20dp"
                             />
                     </LinearLayout>
